@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mobility-SIR 부산 · 도시철도 이동성 기반 인플루엔자 전파 분석</title>
+  <meta name="description" content="부산 도시철도 승차 데이터와 인플루엔자 의료이용 자료를 결합한 이동성 기반 SIR 모형으로 감염재생산지수 R_t, 이동성 보정 전파율 β(t), 전파 신호와 이동량 시나리오를 제공하는 공공보건 의사결정 지원 서비스">
+  <link rel="icon" href="assets/img/icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+  <script type="module" src="assets/js/app.js"></script>
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="brand" href="#home" aria-label="Mobility-SIR 부산 홈">
+        <img src="assets/img/icon.svg" alt="" width="34" height="34">
+        <span class="brand-text"><strong>Mobility-SIR 부산</strong><small>도시철도 이동성 기반 인플루엔자 전파 분석</small></span>
+      </a>
+      <nav class="tabs" aria-label="주요 메뉴">
+        <a href="#home" data-route="home">개요</a>
+        <a href="#dashboard" data-route="dashboard">부산 대시보드</a>
+        <a href="#decompose" data-route="decompose">요인 분해</a>
+        <a href="#scenario" data-route="scenario">시나리오(내부)</a>
+        <a href="#research" data-route="research">실제자료 검증</a>
+        <a href="#method" data-route="method">수리모형</a>
+        <a href="#briefing" data-route="briefing">주간 브리핑</a>
+        <a href="#data" data-route="data">데이터</a>
+      </nav>
+    </div>
+  </header>
+
+  <div id="dataset-banner" class="dataset-banner" role="status"></div>
+
+  <main id="app" tabindex="-1">
+    <div class="loading" id="loading"><div class="spinner"></div><p>부산 실제자료로 R<sub>t</sub>를 추정하는 중…</p></div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div>
+        <strong>Mobility-SIR 부산</strong> · BUSAN DATA WEEK 2026 데이터 활용 우수사례 공모전 응모작
+        <p>기본 화면은 공개 원자료(건보 인플루엔자 의료이용·부산교통공사 승차, 2016–2024)로 지난 절기를 다시 따라가며 계산한 <b>후향 재현</b>이며, 「합성 검증 시즌」은 방법의 정확도 확인용입니다. 내부 검토 신호는 공식 경보가 아니며(공식 경보는 질병관리청 유행주의보), 방역 조치를 자동으로 결정하지 않습니다.</p>
+      </div>
+      <div class="footer-links">
+        <a href="https://github.com/shinshinjae/Mobility-SIR-Busan" target="_blank" rel="noopener">GitHub 저장소</a>
+        <a href="https://github.com/jaewansh/KMOU-A-mobility-informed-SIR-model" target="_blank" rel="noopener">선행연구 코드</a>
+        <a href="https://www.data.go.kr/data/3057229/fileData.do" target="_blank" rel="noopener">부산교통공사 승하차 데이터</a>
+        <a href="https://www.data.go.kr/data/15089429/fileData.do" target="_blank" rel="noopener">NHIS 인플루엔자 의료이용</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

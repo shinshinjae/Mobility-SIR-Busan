@@ -1,0 +1,31 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+<style>
+ body{margin:0;background:#fff;font-family:Pretendard,sans-serif;color:#18202e}
+ .f{width:980px;padding:14px 22px 10px;border-left:6px solid #1f5fbf;background:#f6f9fd;margin:0 0 30px}
+ .f h4{margin:0 0 2px;font-size:19px;color:#0b2545}
+ .f p{margin:2px 0 4px;font-size:15px;color:#3b4558}
+ .katex{font-size:1.32em}
+ .katex-display{margin:8px 0}
+</style></head><body>
+<div class="f" id="f1"><h4>① 도시철도 승차량 → 이동성 계수 ξ(t)  <span style="font-weight:400;font-size:15px;color:#5d6676">[선행연구 식 (5)–(10)]</span></h4>
+$$m_i(t)=\frac{X_i(t)}{Pop_i},\qquad L_i=\frac{1}{|T|}\sum_{t\in T}m_i(t),\qquad c_i(t)=\frac{m_i(t)}{L_i},\qquad b_i(t)=\frac{1}{|W(t)|}\sum_{\mu\in W(t)}c_i(\mu)$$
+$$\xi_i(t)=\Big(\frac{L_i}{L_{ref}}\Big)^{\theta}\,b_i(t),\qquad L_{ref}=\frac{1}{|I|}\sum_{i\in I}L_i,\qquad \theta=0.5\ \ (\text{부산 } L_i/L_{ref}=1.73\text{–}1.83)$$
+<p>X: 일별 승차량, Pop: 인구, W(t): 7일 창(연구는 중심, 실시간 운영은 후행 t−6…t)</p></div>
+<div class="f" id="f2"><h4>② 이동성 기반 SIR과 감염재생산지수  <span style="font-weight:400;font-size:15px;color:#5d6676">[선행연구 식 (1)–(4)]</span></h4>
+$$\frac{dS_i}{dt}=-\xi_i(t)\beta(t)\frac{S_iI_i}{N_i},\qquad \frac{dI_i}{dt}=\xi_i(t)\beta(t)\frac{S_iI_i}{N_i}-\gamma I_i,\qquad \frac{dR_i}{dt}=\gamma I_i,\qquad \gamma^{-1}=4.1\text{일}$$
+$$\mathcal{R}_i(t)=\frac{\xi_i(t)\,\beta(t)}{\gamma}\,\frac{S_i(t)}{N_i},\qquad r_t=\ln\!\big(1+\gamma(\mathcal{R}_t-1)\big),\qquad T_d=\frac{\ln2}{r_t},\qquad \frac{dI_i}{dt}=0\iff\mathcal{R}_i(t)=1$$
+<p>R<sub>t</sub>는 이동성과 전파력을 함께 반영하고, β(t)는 이동성 계수를 보정한 뒤 남는 전파율(“고유 전파력”)이다.</p></div>
+<div class="f" id="f3"><h4>③ 음이항 관측 상태공간 모형과 입자필터·평활</h4>
+$$C_t\sim\text{Poisson}\Big(\xi_t\beta_t\frac{S_tI_t}{N}\Big),\quad D_t\sim\text{Bin}(I_t,\gamma),\quad \log\beta_{t+1}=\log\beta_t+\sigma\varepsilon_t,\quad y_t\sim\text{NB}\Big(\rho\!\!\sum_{u\in(t',t]}\!\!C_u,\ k\Big)$$
+$$w_t^{(j)}\propto w_{t-1}^{(j)}\,p(y_t\mid x_t^{(j)}),\qquad P(\mathcal{R}_t>1\mid y_{1:t})=\sum_j w_t^{(j)}\,\mathbb{1}\{\mathcal{R}_t^{(j)}>1\},\qquad \hat x_{s\mid s+14}\ (\text{고정지연 평활})$$
+<p>관측은 일·주 단위 모두 직전 관측일 t′ 이후 누적 신규감염과 비교. 실시간 판단 = 입자필터(기준일까지 자료), 확정값 = 14일 지연 입자평활. N<sub>p</sub>=2,000, σ=0.05, k=20, 가정 ρ=1·초기 면역 0.</p></div>
+<div class="f" id="f4"><h4>④ 의사결정 보조 지표: 내부 검토 신호 · 요인 분해 · 사후 시나리오</h4>
+$$\text{신호}=\begin{cases}\text{급상승}&p_t\ge0.95,\ \tilde{\mathcal{R}}_t\ge1.3,\ \bar y^{(7)}_t\ge\tau\\ \text{상승}&p_t\ge0.8,\ \bar y^{(7)}_t\ge\tau\\ \text{관찰}&p_t\ge0.5\\ \text{안정}&\text{그 외}\end{cases}\qquad \Delta\log\mathcal{R}_t=\underbrace{\Delta\log\xi_t}_{\text{이동성}}+\underbrace{\Delta\log\beta_t}_{\text{고유 전파력}}+\underbrace{\Delta\log\tfrac{S_t}{N}}_{\text{감수성}}$$
+$$\xi_c(t)=(1-r)^{\eta}\,\xi(t)\ \ (t_0\le t\lt t_0+d),\qquad D_c=\sum_t\mathbb{1}\{\mathcal{R}_c(t)>1\},\qquad E_c=\sum_t\max(\mathcal{R}_c(t)-1,0)$$
+<p>τ: 직전 3개 절기 비유행기 7일 평균의 평균+2SD(질병청 유행기준 산식 단순화), 3일 연속 시 단계 변경(올릴 때 3일 중 최저). 공식 경보는 질병청 유행주의보. 분해·시나리오는 가정 기반 계산이며 인과효과가 아님.</p></div>
+<script>document.addEventListener("DOMContentLoaded",()=>{renderMathInElement(document.body,{delimiters:[{left:"$$",right:"$$",display:true}],throwOnError:false});document.body.dataset.ready="1";});</script>
+</body></html>

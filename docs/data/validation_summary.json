@@ -1,0 +1,235 @@
+{
+ "generated": "scripts/real_summary.mjs",
+ "settings": {
+  "nParticles": 2000,
+  "seed": 7,
+  "sigma": 0.05,
+  "kObs": 20,
+  "lag": 14
+ },
+ "real": {
+  "seasons": [
+   {
+    "season": "2016-17",
+    "N": 3484591,
+    "L_ratio": 1.7262,
+    "tau": 11.8,
+    "total": 105442,
+    "peak": 5694,
+    "peak_date": "2016-12-26",
+    "advisory": "2016-12-08",
+    "advisory_source": "https://www.kdca.go.kr/bbs/kdca/42/210727/artclView.do",
+    "first_signal": "2016-11-22",
+    "baseline_cross": "2016-11-20",
+    "simple_rule": "2016-11-20",
+    "lead_vs_advisory": 16,
+    "lead_vs_peak": 34,
+    "rt_peak_smooth": 1.9446206092834473,
+    "rt_peak_filter": 2.0176143646240234,
+    "mae7": 11.228413838533399,
+    "mae7_rel_peak": 0.001971972925629329,
+    "mean_daily": 288.8821917808219,
+    "model_on": 66,
+    "model_false": 6,
+    "simple_on": 72,
+    "simple_false": 7,
+    "partial": false
+   },
+   {
+    "season": "2017-18",
+    "N": 3456053,
+    "L_ratio": 1.7473,
+    "tau": 13.4,
+    "total": 173043,
+    "peak": 7575,
+    "peak_date": "2018-01-02",
+    "advisory": "2017-12-01",
+    "advisory_source": "https://www.kdca.go.kr/bbs/kdca/42/210943/artclView.do",
+    "first_signal": "2017-11-03",
+    "baseline_cross": "2017-11-01",
+    "simple_rule": "2017-11-01",
+    "lead_vs_advisory": 28,
+    "lead_vs_peak": 60,
+    "rt_peak_smooth": 1.6507995128631592,
+    "rt_peak_filter": 1.6869536638259888,
+    "mae7": 14.37191492868228,
+    "mae7_rel_peak": 0.0018972824988359445,
+    "mean_daily": 474.0904109589041,
+    "model_on": 71,
+    "model_false": 7,
+    "simple_on": 108,
+    "simple_false": 31,
+    "partial": false
+   },
+   {
+    "season": "2018-19",
+    "N": 3427647,
+    "L_ratio": 1.7428,
+    "tau": 18.2,
+    "total": 151834,
+    "peak": 6958,
+    "peak_date": "2018-12-24",
+    "advisory": "2018-11-16",
+    "advisory_source": "https://www.kdca.go.kr/bbs/kdca/42/211190/artclView.do",
+    "first_signal": "2018-11-04",
+    "baseline_cross": "2018-11-02",
+    "simple_rule": "2018-11-02",
+    "lead_vs_advisory": 12,
+    "lead_vs_peak": 50,
+    "rt_peak_smooth": 1.655953049659729,
+    "rt_peak_filter": 1.7131892442703247,
+    "mae7": 14.962640610560959,
+    "mae7_rel_peak": 0.002150422622960759,
+    "mean_daily": 415.9835616438356,
+    "model_on": 98,
+    "model_false": 9,
+    "simple_on": 109,
+    "simple_false": 9,
+    "partial": false
+   },
+   {
+    "season": "2022-23",
+    "N": 3305587,
+    "L_ratio": 1.7924,
+    "tau": 5.3,
+    "total": 164439,
+    "peak": 5198,
+    "peak_date": "2022-12-26",
+    "advisory": "2022-09-16",
+    "advisory_source": "https://www.kdca.go.kr/bbs/kdca/42/213938/artclView.do",
+    "first_signal": "2022-09-22",
+    "baseline_cross": "2022-09-01",
+    "simple_rule": "2022-09-17",
+    "lead_vs_advisory": -6,
+    "lead_vs_peak": 95,
+    "rt_peak_smooth": 1.525161862373352,
+    "rt_peak_filter": 1.599841594696045,
+    "mae7": 17.041347790867082,
+    "mae7_rel_peak": 0.003278443207169504,
+    "mean_daily": 450.5178082191781,
+    "model_on": 152,
+    "model_false": 10,
+    "simple_on": 204,
+    "simple_false": 16,
+    "partial": false
+   },
+   {
+    "season": "2023-24",
+    "N": 3279980,
+    "L_ratio": 1.7889,
+    "tau": 201.1,
+    "total": 244047,
+    "peak": 6629,
+    "peak_date": "2023-12-11",
+    "advisory": "2023-09-15",
+    "advisory_source": "https://www.kdca.go.kr/bbs/kdca/42/214519/artclView.do",
+    "first_signal": "2023-09-23",
+    "baseline_cross": "2023-09-21",
+    "simple_rule": "2023-09-21",
+    "lead_vs_advisory": -8,
+    "lead_vs_peak": 79,
+    "rt_peak_smooth": 1.3962448835372925,
+    "rt_peak_filter": 1.463559627532959,
+    "mae7": 36.73937517299015,
+    "mae7_rel_peak": 0.005542219817919769,
+    "mean_daily": 666.7950819672132,
+    "model_on": 57,
+    "model_false": 7,
+    "simple_on": 79,
+    "simple_false": 16,
+    "partial": false
+   },
+   {
+    "season": "2024-25",
+    "N": 3254099,
+    "L_ratio": 1.8307,
+    "tau": 220.8,
+    "total": 65049,
+    "peak": 11846,
+    "peak_date": "2024-12-30",
+    "advisory": "2024-12-20",
+    "advisory_source": "https://www.kdca.go.kr/bbs/kdca/42/215129/artclView.do",
+    "first_signal": "2024-12-14",
+    "baseline_cross": "2024-12-12",
+    "simple_rule": "2024-12-12",
+    "lead_vs_advisory": 6,
+    "lead_vs_peak": 16,
+    "rt_peak_smooth": 1.8537837266921997,
+    "rt_peak_filter": 1.9739227294921875,
+    "mae7": 21.02335513835982,
+    "mae7_rel_peak": 0.001774721858716851,
+    "mean_daily": 533.188524590164,
+    "model_on": 18,
+    "model_false": 0,
+    "simple_on": 20,
+    "simple_false": 0,
+    "partial": true
+   }
+  ],
+  "median_lead_vs_advisory": 9,
+  "earlier_count": 4,
+  "n": 6
+ },
+ "synthetic": {
+  "operational_trailing": {
+   "pf_rmse": 0.10362718117845078,
+   "ps_rmse": 0.058661941561060575,
+   "reduction_pct": 43.39135650130055,
+   "pf_cover90": 0.8821917808219178,
+   "ps_cover90": 0.9260273972602739,
+   "precision": 0.84,
+   "signal_days": 50,
+   "waves": [
+    {
+     "wave": [
+      "2025-11-17",
+      "2025-12-13"
+     ],
+     "signal": "2025-11-21",
+     "peak": "2025-12-09",
+     "lead": 18
+    },
+    {
+     "wave": [
+      "2026-03-01",
+      "2026-03-18"
+     ],
+     "signal": "2026-03-05",
+     "peak": "2026-03-19",
+     "lead": 14
+    }
+   ],
+   "tau": 94.33372787543229
+  },
+  "research_centered": {
+   "pf_rmse": 0.0937730710280059,
+   "ps_rmse": 0.042119437322627955,
+   "reduction_pct": 55.083653696220814,
+   "pf_cover90": 0.9260273972602739,
+   "ps_cover90": 0.9835616438356164,
+   "precision": 0.84,
+   "signal_days": 50,
+   "waves": [
+    {
+     "wave": [
+      "2025-11-17",
+      "2025-12-13"
+     ],
+     "signal": "2025-11-21",
+     "peak": "2025-12-09",
+     "lead": 18
+    },
+    {
+     "wave": [
+      "2026-03-01",
+      "2026-03-18"
+     ],
+     "signal": "2026-03-05",
+     "peak": "2026-03-19",
+     "lead": 14
+    }
+   ],
+   "tau": 94.33372787543229
+  }
+ }
+}
