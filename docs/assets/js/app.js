@@ -603,7 +603,7 @@ function renderResearch() {
   <div class="card mt">
     <h3>선행연구</h3>
     <ol class="small">
-      <li>Shin J., Ahn S., Kim M. (2026). <i>A mobility-informed SIR model for regional transmission dynamics: Evidence from subway mobility data in Korea, 2016–2023.</i> 연구원고(한국해양대학교).</li>
+      <li>Shin J., Kim M. (2026). <i>A mobility-informed SIR model for regional transmission dynamics: Evidence from subway mobility data in Korea, 2016–2023.</i> 연구원고(한국해양대학교).</li>
       <li>Shin J., Jeong E., Jo S., Kim M. (2026). <i>Disentangling Mobility-Driven and Intrinsic Transmission in Regional Influenza Dynamics.</i> 한국수리생물학회 포스터 발표. 부산광역시·교육부 RISE 사업 지원(2026-RISE-02-002-001).</li>
       <li>연구 코드·재현 자료: <a href="https://github.com/jaewansh/KMOU-A-mobility-informed-SIR-model" target="_blank" rel="noopener">github.com/jaewansh/KMOU-A-mobility-informed-SIR-model</a></li>
     </ol>
