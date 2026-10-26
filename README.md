@@ -200,7 +200,7 @@ node scripts/real_summary.mjs    # 실제자료·합성 검증 요약 재계산
 
 ## 선행연구
 
-- Shin J., Ahn S., Kim M. (2026). *A mobility-informed SIR model for regional transmission dynamics: Evidence from subway mobility data in Korea, 2016–2023.* 연구원고.
+- Shin J., Kim M. (2026). *A mobility-informed SIR model for regional transmission dynamics: Evidence from subway mobility data in Korea, 2016–2023.* 연구원고.
 - Shin J., Jeong E., Jo S., Kim M. (2026). *Disentangling Mobility-Driven and Intrinsic Transmission in Regional Influenza Dynamics.* 한국수리생물학회 포스터 발표. 부산광역시·교육부 RISE 사업 지원(2026-RISE-02-002-001).
 - 연구 코드: https://github.com/jaewansh/KMOU-A-mobility-informed-SIR-model
 
@@ -212,7 +212,7 @@ node scripts/real_summary.mjs    # 실제자료·합성 검증 요약 재계산
 
 ## 팀
 
-S.I.D.Lab (Spatial Infectious Disease Dynamics Lab) — 구성원과 역할은 제출 시 기입합니다.
+S.I.D.Lab (Spatial Infectious Disease Dynamics Lab)
 
 ## 라이선스
 
